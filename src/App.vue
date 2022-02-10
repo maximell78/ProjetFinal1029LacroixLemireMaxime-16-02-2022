@@ -1,28 +1,62 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <headerA></headerA>
+    <hr>
+    <product-list v-bind:products="products"></product-list>
+    <footerA></footerA>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductList from "./components/ProductList.vue";
+import FooterA from "./components/FooterA.vue";
+import HeaderA from "./components/HeaderA.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProductList,
+    FooterA,
+    HeaderA
+  },
+  data() {
+    return {
+      products: [
+        {
+          id: 1,
+          title: "Spider-Man: No way home",
+          categorie: "Jeux-Videos",
+        },
+        {
+          id: 2,
+          title: "Avengers: End Game",
+          categorie: "BluRay",
+        },
+        {
+          id: 3,
+          title: "Hulk",
+          categorie: "DVD",
+        }
+      ],
+      categories: [
+        {
+          id: 1,
+          name: "Jeux-Videos"
+        },
+        {
+          id: 2,
+          name: "Bluray",
+        },
+        {
+          id: 3,
+          name: "DVD",
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './assets/css/style.css';
 </style>
