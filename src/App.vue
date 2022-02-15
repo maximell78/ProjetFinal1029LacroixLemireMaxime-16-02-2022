@@ -3,12 +3,16 @@
     <headerA></headerA>
     <hr>
     <product-list v-bind:products="products"></product-list>
+    <product-edit v-bind:categories="categories"></product-edit>
+    <contact v-bind:categories="categories"></contact>
     <footerA></footerA>
   </div>
 </template>
 
 <script>
 import ProductList from "./components/ProductList.vue";
+import ProductEdit from "./components/ProductEdit.vue";
+import Contact from "./components/Contact.vue";
 import FooterA from "./components/FooterA.vue";
 import HeaderA from "./components/HeaderA.vue";
 
@@ -16,6 +20,8 @@ export default {
   name: 'App',
   components: {
     ProductList,
+    ProductEdit,
+    Contact,
     FooterA,
     HeaderA
   },
@@ -41,19 +47,19 @@ export default {
       categories: [
         {
           id: 1,
-          name: "Jeux-Videos"
+          title: "Jeux-Videos",
         },
         {
           id: 2,
-          name: "Bluray",
+          title: "BluRay",
         },
         {
           id: 3,
-          name: "DVD",
-        }
-      ]
-    }
-  }
+          title: "DVD",
+        },
+      ],
+    };
+  },
 }
 </script>
 
