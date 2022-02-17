@@ -22,7 +22,7 @@ J'ai utilisé VueJS pour mon projet car il permet une affichage et une navigatio
 Dans une société qui demande à avoir toute maintenant, VueJS permet de répondre aux besoins de vitesses de l'affichage 
 des pages pour ainsi permettre aux usagers d'avoir une navigation qui répond à leurs besoins.
 
-#### Objet VueJS
+### Objet VueJS
 
 Dans mon application, j'ai utilisé les objets products et categories.
 Cela m'a permis de pouvoir passer le data dans mes composents pour qu'ils puissent s'afficher dans ma page.
