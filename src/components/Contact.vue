@@ -1,5 +1,5 @@
 <template>
-    <form class="marg center">
+    <form name="formulaire" class="marg center" @submit="valid">
         <h1>Formulaire de contact</h1>
         <div class="center">
             <label for="lname">Votre nom : </label>
@@ -10,14 +10,14 @@
         <br/>
         <div class="center">
             <label for="email">Votre courriel : </label>
-            <input class="margr" type="email" name="email" id="email" placeholder="max@maximal.ca" pattern="[a-zA-Z]+[\@]{1,1}[a-zA-Z]+[\.]{1,1}[a-zA-Z]{2,3}+/g" required>
+            <input class="margr" type="email" name="email" id="email" placeholder="max@maximal.ca" required>
             <label for="categorie">Choisir une catégorie : </label>
         <select name="categorie" id="categorie" required>
             <option v-for="categorie in categories" v-bind:categorie="categorie" v-bind:key="categorie.id">{{categorie.title}}</option>
         </select>
         </div>
         <div class="center margt">
-            <button type="submit">Cliquez ici pour soumettre</button>
+            <input type="submit" value="Cliquez ici pour soumettre"/>
         </div>        
     </form>
 </template>
@@ -28,6 +28,16 @@ export default {
     name: "Contact",
     props: {
         categories: Array,
+    },
+    methods: {
+    valid: function (courriel) {
+        var exp = new RegExp ("^[a-zA-Z0-9]+[/@]{1,1}[a-zA-Z0-9]+[/.]{1,1}[a-zA-Z0-9]{2,3}", "g");
+        if (exp.test(courriel)) {
+            alert("Vos information ont été reçu")
+        } else {
+            alert("Le courriel n'est pas valide")
+        }
+        },
     },
 };
 </script>

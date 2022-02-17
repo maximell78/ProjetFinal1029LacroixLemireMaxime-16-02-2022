@@ -1,5 +1,5 @@
 <template>
-    <form class="marg center margt">
+    <form class="marg center margt" @submit="valid">
         <div class="center">
             <label for="titre">Inscrivez le titre : </label>
             <input class="margr" type="text" name="titre" id="titre" minlength="3" maxlength="50" required>
@@ -20,8 +20,14 @@ export default {
     name: "ProductEdit",
     props: {
         categories: Array,
-    }
+    },
+    methods: {
+    valid: function () {
+        alert("Le titre a été ajouté");
+    },
+    },
 };
+
 </script>
 
 <style scoped>

@@ -14,13 +14,6 @@ export default {
     },
     props: {
         products: Array,
-    },
-    /* methods: {
-        showValues: function() {
-            alert(
-                `Titre du produit: ${this.monproduit.title} Produit: ${this.monproduit.product}`
-            );
-        },
-    }, */
+    },    
 };
 </script>

@@ -30,18 +30,15 @@ export default {
       products: [
         {
           id: 1,
-          title: "Spider-Man: No way home",
-          categorie: "Jeux-Videos",
+          name: "Spider-Man: No way home",
         },
         {
           id: 2,
-          title: "Avengers: End Game",
-          categorie: "BluRay",
+          name: "Avengers: End Game",
         },
         {
           id: 3,
-          title: "Hulk",
-          categorie: "DVD",
+          name: "Hulk",
         }
       ],
       categories: [
